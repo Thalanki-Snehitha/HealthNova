@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Health - Smart HealthNova Tracker</title>
+    <link rel="stylesheet" href="track.css">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Confetti Effect -->
+    <div id="confetti"></div>
+
+    <header>
+        <h1>Smart HealthNova Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="edit-profile.html">Edit Profile</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tracker-container">
+            <h2>Track Your Health in Real-Time</h2>
+            <p>Connect your smartwatch to get advanced health metrics and analysis.</p>
+
+            <!-- Scanning Animation -->
+            <div class="scan-container">
+                <div class="scan-circle">
+                    <i class="fas fa-heartbeat pulse"></i>
+                    <p>Scanning...</p>
+                </div>
+            </div>
+
+            <!-- Input Credentials -->
+            <div class="credentials">
+                <h3>Enter Credentials to Sync:</h3>
+                <input type="text" id="device-id" placeholder="Smartwatch ID" />
+                <button class="cta-button" id="sync-device">Sync Device</button>
+            </div>
+
+            <!-- Health Metrics -->
+            <div class="health-metrics">
+                <h3>Health Metrics</h3>
+                <div class="metric">
+                    <i class="fas fa-heart"></i>
+                    <span>Heart Rate:</span> <strong id="heart-rate">-- bpm</strong>
+                </div>
+                <div class="metric">
+                    <i class="fas fa-shoe-prints"></i>
+                    <span>Steps Taken:</span> <strong id="steps">--</strong>
+                </div>
+                <div class="metric">
+                    <i class="fas fa-fire-alt"></i>
+                    <span>Calories Burned:</span> <strong id="calories">-- kcal</strong>
+                </div>
+                <div class="metric">
+                    <i class="fas fa-lungs"></i>
+                    <span>Blood Oxygen Level:</span> <strong id="oxygen-level">--%</strong>
+                </div>
+                <div class="metric">
+                    <i class="fas fa-brain"></i>
+                    <span>Stress Level:</span> <strong id="stress-level">--%</strong>
+                </div>
+            </div>
+
+            <!-- Refresh Data -->
+            <button class="cta-button" id="refresh-data">Refresh Data</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HealthNova. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="track.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js/dist/index.min.js"></script>
+</body>
+</html>
