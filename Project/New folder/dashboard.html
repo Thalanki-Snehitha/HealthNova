@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | HealthNova</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <h2>Your Health Dashboard</h2>
+            <div id="metrics">
+                <div>
+                    <h3>Water Intake</h3>
+                    <p id="water">0 L</p>
+                </div>
+                <div>
+                    <h3>Steps</h3>
+                    <p id="steps">0</p>
+                </div>
+                <div>
+                    <h3>Sleep</h3>
+                    <p id="sleep">0 hours</p>
+                </div>
+                <div>
+                    <h3>Mood</h3>
+                    <p id="mood">Neutral</p>
+                </div>
+            </div>
+            <button onclick="updateMetrics()">Update Metrics</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HealthNova. All rights reserved.</p>
+    </footer>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

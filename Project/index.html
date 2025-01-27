@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthNova | VitaSync</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti"></script> <!-- Confetti -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>HealthNova</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="track.html">Track Health</a></li>
+                <li><a href="#">Features</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Track your Health like never before!</h2>
+            <p>VitaSync uses AI-powered insights to optimize your health.</p>
+            <button class="cta-button" onclick="window.location.href='login.html'">Get Started</button>
+        </section>
+
+        <section class="features">
+            <h2>Our Key Features</h2>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <img src="images/health-track.png" alt="Track Health">
+                    <h3>Health Tracking</h3>
+                    <p>Track your daily water intake, steps, sleep, and mood.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/smartwatch-sync.png" alt="Smart Watch Sync">
+                    <h3>Smart Watch Sync</h3>
+                    <p>Sync with your smartwatch for real-time health updates.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/ai-insights.png" alt="AI Insights">
+                    <h3>AI-Powered Insights</h3>
+                    <p>Get personalized health suggestions based on your data.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo">
+            <h2>See How it Works</h2>
+            <div class="demo-container">
+                <img src="images/smartwatch-demo.png" alt="Smart Watch Demo">
+                <div class="demo-text">
+                    <h3>Monitor Your Progress</h3>
+                    <p>Keep track of your fitness, health, and habits from the palm of your hand.</p>
+                    <button class="cta-button" onclick="startDemo()">Start Demo</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HealthNova. All Rights Reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
