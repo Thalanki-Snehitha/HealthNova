@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | HealthNova</title>
+    <title>HealthNova Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 <body>
+    <!-- Background Animation -->
+    <div id="particles-js"></div>
+
+    <!-- Header -->
     <header>
         <nav>
             <div class="logo">
@@ -19,31 +26,67 @@
         </nav>
     </header>
 
+    <!-- Main Dashboard -->
     <main>
         <section class="dashboard">
             <div class="dashboard-header">
-                <h2>Your Health Dashboard</h2>
+                <h2>Welcome, [User Name]</h2>
+                <p>Your personalized health insights, metrics, and goals in one place.</p>
             </div>
-            <div class="dashboard-content">
-                <h3>Track Your Health Metrics</h3>
+
+            <!-- Visualization Cards -->
+            <div class="dashboard-metrics">
                 <div class="metric-card">
-                    <h4>Water Intake</h4>
-                    <p>500ml</p>
+                    <h3>Water Intake</h3>
+                    <canvas id="waterChart"></canvas>
                 </div>
                 <div class="metric-card">
-                    <h4>Steps</h4>
-                    <p>5,000</p>
+                    <h3>Steps</h3>
+                    <canvas id="stepsChart"></canvas>
                 </div>
                 <div class="metric-card">
-                    <h4>Sleep</h4>
-                    <p>7 hours</p>
+                    <h3>Sleep</h3>
+                    <canvas id="sleepChart"></canvas>
                 </div>
             </div>
+
+            <!-- Health Predictions Section -->
+            <section class="health-predictions">
+                <h3>Health Insights</h3>
+                <div class="predictions-grid">
+                    <div class="prediction-card">
+                        <h4>Today's Tip</h4>
+                        <p>Drink 2L of water to stay hydrated.</p>
+                    </div>
+                    <div class="prediction-card">
+                        <h4>Sleep Recommendation</h4>
+                        <p>7-8 hours for optimal recovery.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Real-Time Updates -->
+            <section class="real-time-updates">
+                <h3>Real-Time Data</h3>
+                <div class="updates-grid">
+                    <div class="update-card">
+                        <h4>Weather</h4>
+                        <p>Sunny, 26°C</p>
+                    </div>
+                    <div class="update-card">
+                        <h4>Body Temperature</h4>
+                        <p>36.7°C (Normal)</p>
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 HealthNova. All Rights Reserved.</p>
     </footer>
+
+    <script src="dashboard.js"></script>
 </body>
 </html>

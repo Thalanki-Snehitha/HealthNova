@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Dashboard | HealthNova</title>
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="editdashboard.css">
 </head>
 <body>
     <header>
@@ -13,8 +13,8 @@
                 <h1>HealthNova</h1>
             </div>
             <ul>
-                <li><a href="login.html">Logout</a></li>
                 <li><a href="dashboard.html">Back to Dashboard</a></li>
+                <li><a href="login.html">Logout</a></li>
             </ul>
         </nav>
     </header>
@@ -23,7 +23,7 @@
         <section class="edit-dashboard">
             <div class="form-container">
                 <h2>Edit Your Profile</h2>
-                <form id="editForm" method="POST">
+                <form id="editForm">
                     <div class="input-group">
                         <label for="name">Full Name:</label>
                         <input type="text" id="name" name="name" value="John Doe" required>
@@ -36,7 +36,7 @@
                         <label for="password">Password:</label>
                         <input type="password" id="password" name="password" value="password123" required>
                     </div>
-                    <button type="submit" class="cta-button">Save Changes</button>
+                    <button type="button" class="cta-button" onclick="saveProfile()">Save Changes</button>
                 </form>
             </div>
         </section>
@@ -45,5 +45,21 @@
     <footer>
         <p>&copy; 2025 HealthNova. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        // Save profile to local storage
+        function saveProfile() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            // Save to local storage
+            localStorage.setItem("profileName", name);
+            localStorage.setItem("profileEmail", email);
+            localStorage.setItem("profilePassword", password);
+
+            alert("Profile updated successfully!");
+        }
+    </script>
 </body>
 </html>
